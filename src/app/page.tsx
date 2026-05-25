@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 import { MetricCard } from "@/components/motion/metric-card";
 import { RegistrationForm } from "@/components/registration-form";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import {
   aboutPoints,
   audiences,
@@ -62,11 +63,14 @@ export default function Home() {
       />
       <header className="site-header">
         <Link href="#top" className="brand-mark" aria-label="WLIMP home">
-          <span>W</span>
-          <div>
-            <strong>WLIMP</strong>
-            <small>WeCare Leadership</small>
-          </div>
+          <Image
+            src="/brand/wecare-logo-transparent.png"
+            alt="WeCare Foundation"
+            width={151}
+            height={130}
+            className="brand-logo"
+            priority
+          />
         </Link>
         <nav aria-label="Primary navigation">
           {navItems.map(([label, href]) => (
@@ -85,10 +89,10 @@ export default function Home() {
           <div className="ambient-grid" aria-hidden="true" />
           <div className="hero-inner">
             <Reveal className="hero-copy">
-              <p className="institution-line">{siteConfig.organizer}</p>
               <h1>{siteConfig.theme}</h1>
               <p className="hero-lede">
-                WLIMP is a structured leadership and impact pathway preparing emerging young leaders for ethical service,
+                The WeCare Leadership and Impact Mentorship Programme (WLIMP) is a structured leadership 
+                and impact pathway preparing emerging young leaders for ethical service,
                 governance awareness, innovation and practical contribution to Nigeria and Africa.
               </p>
               <div className="hero-actions">
@@ -309,11 +313,13 @@ export default function Home() {
       <footer className="site-footer">
         <div>
           <Link href="#top" className="brand-mark">
-            <span>W</span>
-            <div>
-              <strong>WLIMP</strong>
-              <small>WeCare Leadership</small>
-            </div>
+            <Image
+              src="/brand/wecare-logo-transparent.png"
+              alt="WeCare Foundation"
+              width={151}
+              height={130}
+              className="brand-logo"
+            />
           </Link>
           <p>{siteConfig.organizer}</p>
         </div>
@@ -330,6 +336,7 @@ export default function Home() {
           <small>Copyright {new Date().getFullYear()} WeCare Centre for Community Awareness and Empowerment Initiative.</small>
         </div>
       </footer>
+      <ScrollToTop />
     </>
   );
 }

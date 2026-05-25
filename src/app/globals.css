@@ -2,17 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #17211d;
-  --emerald: #014a36;
-  --emerald-700: #063d30;
-  --gold: #b58b36;
-  --navy: #10243a;
-  --warm: #f6f3ed;
-  --warm-2: #ece7dc;
-  --charcoal: #17211d;
-  --muted: #68736d;
-  --border: #ded8cc;
-  --ring: #b58b36;
+  --foreground: #06183d;
+  --emerald: #06183d;
+  --emerald-700: #041231;
+  --gold: #1598d4;
+  --navy: #06183d;
+  --warm: #f3f7fb;
+  --warm-2: #e6eef7;
+  --charcoal: #06183d;
+  --muted: #5e6b82;
+  --border: #d6e0eb;
+  --ring: #1598d4;
 }
 
 @theme inline {
@@ -57,7 +57,7 @@ a {
 }
 
 ::selection {
-  background: rgba(181, 139, 54, 0.22);
+  background: rgba(21, 152, 212, 0.22);
 }
 
 .site-header {
@@ -70,7 +70,8 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(20px, 4vw, 56px);
+  min-height: 70px;
+  padding: 12px clamp(20px, 4vw, 56px);
   border-bottom: 1px solid rgba(222, 216, 204, 0.72);
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(18px);
@@ -79,20 +80,17 @@ a {
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 0;
   min-width: max-content;
+  line-height: 0;
 }
 
-.brand-mark > span {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--emerald);
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: 0;
+.brand-logo {
+  display: block;
+  width: 142px;
+  height: 46px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .brand-mark div {
@@ -132,10 +130,10 @@ a {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  padding: 128px clamp(20px, 4vw, 56px) 72px;
+  padding: 118px clamp(20px, 4vw, 56px) 72px;
   background:
-    radial-gradient(circle at 84% 20%, rgba(181, 139, 54, 0.16), transparent 31%),
-    linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+    radial-gradient(circle at 84% 20%, rgba(21, 152, 212, 0.16), transparent 31%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 }
 
 .ambient-grid {
@@ -144,8 +142,8 @@ a {
   pointer-events: none;
   opacity: 0.5;
   background-image:
-    linear-gradient(rgba(1, 74, 54, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(1, 74, 54, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(6, 24, 61, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 24, 61, 0.045) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
@@ -261,7 +259,7 @@ a {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.9);
   padding: 18px;
-  box-shadow: 0 18px 50px rgba(16, 36, 58, 0.12);
+  box-shadow: 0 18px 50px rgba(6, 24, 61, 0.12);
   backdrop-filter: blur(18px);
 }
 
@@ -380,7 +378,7 @@ a {
 .stakeholder-card:hover {
   transform: translateY(-4px);
   border-color: rgba(181, 139, 54, 0.55);
-  box-shadow: 0 18px 50px rgba(16, 36, 58, 0.08);
+  box-shadow: 0 18px 50px rgba(6, 24, 61, 0.08);
 }
 
 .about-card svg,
@@ -470,7 +468,7 @@ a {
 }
 
 .programme-section {
-  background: #fbfaf7;
+  background: #f7fbff;
 }
 
 .module-list {
@@ -537,7 +535,7 @@ a {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 }
 
 .experience-grid {
@@ -550,7 +548,7 @@ a {
 
 .experience-panel {
   padding: 30px;
-  background: #fbfaf7;
+  background: #f7fbff;
 }
 
 .experience-panel h3 {
@@ -606,7 +604,7 @@ a {
   min-height: 108px;
   place-items: center;
   padding: 22px;
-  background: #17211d;
+  background: #06183d;
   color: rgba(255, 255, 255, 0.72);
   text-align: center;
   font-size: clamp(14px, 1.55vw, 17px);
@@ -707,7 +705,7 @@ a {
 }
 
 .form-status.success {
-  background: rgba(1, 74, 54, 0.08);
+  background: rgba(6, 24, 61, 0.08);
   color: var(--emerald);
 }
 
@@ -722,7 +720,7 @@ a {
   gap: 36px;
   padding: 48px clamp(20px, 4vw, 56px);
   border-top: 1px solid var(--border);
-  background: #fbfaf7;
+  background: #f7fbff;
 }
 
 .site-footer p,
@@ -751,6 +749,43 @@ a {
   width: 17px;
   height: 17px;
   color: var(--gold);
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: clamp(18px, 3vw, 34px);
+  bottom: clamp(18px, 3vw, 34px);
+  z-index: 45;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(214, 224, 235, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+  box-shadow: 0 18px 45px rgba(6, 24, 61, 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 180ms ease, transform 180ms ease, background 180ms ease, color 180ms ease;
+  backdrop-filter: blur(14px);
+}
+
+.scroll-to-top[data-visible="true"] {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.scroll-to-top svg {
+  width: 18px;
+  height: 18px;
 }
 
 .footer-meta p {
@@ -792,15 +827,17 @@ a {
 @media (max-width: 760px) {
   .site-header {
     position: sticky;
-    padding: 14px 18px;
+    min-height: 64px;
+    padding: 10px 18px;
   }
 
   .site-header nav {
     display: none;
   }
 
-  .brand-mark small {
-    display: none;
+  .brand-logo {
+    width: 124px;
+    height: 42px;
   }
 
   .hero-section {
