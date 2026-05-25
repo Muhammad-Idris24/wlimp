@@ -55,7 +55,9 @@ export async function POST(request: NextRequest) {
       throw error;
     }
 
-    await sendEmails(registration);
+    await sendEmails(registration).catch((emailError) => {
+      console.error("Registration email delivery failed", emailError);
+    });
 
     return NextResponse.json({ message: "Registration completed." });
   } catch (error) {
@@ -92,6 +94,7 @@ async function sendEmails(registration: Omit<RegistrationInput, "website">) {
           <p>WeCare Centre for Community Awareness and Empowerment Initiative</p>
         </div>
       `,
+      replyTo: adminEmail,
     }),
     resend.emails.send({
       from,
@@ -110,6 +113,7 @@ async function sendEmails(registration: Omit<RegistrationInput, "website">) {
           <p><strong>Motivation:</strong><br />${escapeHtml(registration.motivation)}</p>
         </div>
       `,
+      replyTo: registration.email,
     }),
   ]);
 }
