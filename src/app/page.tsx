@@ -318,7 +318,7 @@ export default function Home() {
               alt="WeCare Foundation"
               width={151}
               height={130}
-              className="brand-logo"
+              className="brand-logo footer-logo"
             />
           </Link>
           <p>{siteConfig.organizer}</p>
@@ -333,8 +333,10 @@ export default function Home() {
         </address>
         <div className="footer-meta">
           <p>Partnership conversations are welcome for institutional support, media, technical assistance and follow-on opportunities.</p>
-          <small>Copyright {new Date().getFullYear()} WeCare Centre for Community Awareness and Empowerment Initiative.</small>
         </div>
+        <small className="footer-copyright">
+          Copyright {new Date().getFullYear()} WeCare Centre for Community Awareness and Empowerment Initiative.
+        </small>
       </footer>
       <ScrollToTop />
     </>
