@@ -99,15 +99,30 @@ export const stakeholderCases = [
 ];
 
 export const partners = [
-  "Tesala Africa",
-  "Cohortle",
-  "Eashas Learning Foundation",
-  "Zee Tech",
-  "NYAPD",
-  "Classico",
-  "Bauchi Pearl Magazine",
-  "Tafawa Balewa Colloquium",
-  "Ministry of Education",
+  {
+    name: "EESHA'S Learning Foundation",
+    logo: "/partners/eesha-learning.jpeg",
+  },
+  {
+    name: "Bauchi Pearl Magazine",
+    logo: "/partners/bauchi-pearl.png",
+  },
+  {
+    name: "NYAPD",
+    logo: "/partners/nyapd.jpeg",
+  },
+  {
+    name: "Tafawa Balewa Colloquium",
+    logo: "/partners/tafawa-balewa.jpeg",
+  },
+  {
+    name: "Al-Mufeed Community Health",
+    logo: "/partners/al-mufeed-ch.jpeg",
+  },
+  {
+    name: "YandyTech Community",
+    logo: "/partners/yandy-tech.png",
+  },
 ];
 
 export const aboutPoints = [

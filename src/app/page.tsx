@@ -281,7 +281,16 @@ export default function Home() {
           </Reveal>
           <div className="partner-wall" aria-label="Partner organisations">
             {partners.map((partner) => (
-              <span key={partner}>{partner}</span>
+              <article className="partner-logo-card" key={partner.name}>
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  width={260}
+                  height={160}
+                  sizes="(max-width: 760px) 80vw, 260px"
+                />
+                <span>{partner.name}</span>
+              </article>
             ))}
           </div>
         </section>
