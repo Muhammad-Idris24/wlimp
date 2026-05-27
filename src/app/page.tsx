@@ -22,9 +22,11 @@ import {
   conferenceActivities,
   conferenceTracks,
   metrics,
+  meetOurSections,
   modules,
   partners,
   siteConfig,
+  speakerBioImages,
   stakeholderCases,
 } from "@/lib/site";
 
@@ -191,6 +193,48 @@ export default function Home() {
               <Reveal className="module-row" delay={Math.min(index * 0.035, 0.2)} key={module}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <p>{module}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section className="section meet-section" aria-labelledby="meet-title">
+          <Reveal className="compact-heading">
+            <p>Meet Our</p>
+            <h2 id="meet-title">The people shaping the WLIMP learning experience.</h2>
+          </Reveal>
+          <div className="meet-grid">
+            {meetOurSections.map((item, index) => (
+              <Reveal className="meet-card" delay={index * 0.06} key={item.title}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={720}
+                  height={520}
+                  sizes="(max-width: 760px) 92vw, 33vw"
+                />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="bio-heading">
+            <p>Facilitator Bios</p>
+            <h3>Profiles from the WLIMP faculty and masterclass sessions.</h3>
+          </Reveal>
+          <div className="bio-grid">
+            {speakerBioImages.map((speaker, index) => (
+              <Reveal className="bio-card" delay={Math.min(index * 0.035, 0.22)} key={`${speaker.name}-${speaker.image}`}>
+                <Image
+                  src={speaker.image}
+                  alt={`${speaker.name} bio flyer`}
+                  width={900}
+                  height={900}
+                  sizes="(max-width: 760px) 92vw, (max-width: 1180px) 30vw, 260px"
+                />
+                <span>{speaker.name}</span>
               </Reveal>
             ))}
           </div>

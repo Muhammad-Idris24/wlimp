@@ -125,6 +125,37 @@ export const partners = [
   },
 ];
 
+export const meetOurSections = [
+  {
+    title: "Meet Our Premier Cohort",
+    image: "/images/premier-cohort.jpeg",
+    body: "A selective group of emerging leaders chosen from a competitive national and international applicant pool.",
+  },
+  {
+    title: "Meet Our Expert-Led Facilitators",
+    image: "/images/expert-led-facilitators.jpg",
+    body: "Practitioners and thought leaders guiding fellows through leadership, governance, communication and social impact.",
+  },
+  {
+    title: "Meet Our Masterclass Facilitators",
+    image: "/images/masterclass-facilitators.jpg",
+    body: "Specialist facilitators delivering practical masterclasses across career development, technology, entrepreneurship and capacity building.",
+  },
+];
+
+export const speakerBioImages = [
+  { name: "Alex Banda", image: "/speaker-bios/processed/alex-banda.jpg" },
+  { name: "Mukhtar Suleiman", image: "/speaker-bios/processed/asd.jpg" },
+  { name: "Nzas Emmanuel", image: "/speaker-bios/processed/dfs.jpg" },
+  { name: "Dr. Aisha Umar Adamu", image: "/speaker-bios/processed/exper.jpg" },
+  { name: "Ahmed Sani Inuwa", image: "/speaker-bios/processed/ahmed-sani-inuwa.jpg" },
+  { name: "Muhammad Sani Kassim", image: "/speaker-bios/processed/muhammad-sani-kassim.jpg" },
+  { name: "Sani Muhammad", image: "/speaker-bios/processed/sani-mohammed.jpg" },
+  { name: "Isawumi Abel Dayo", image: "/speaker-bios/processed/transformational-leadership-recovered-copy.jpg" },
+  { name: "Innocent Waziri", image: "/speaker-bios/processed/waziri.jpg" },
+  { name: "Zainab Mukhtar", image: "/speaker-bios/processed/zainab.jpg" },
+];
+
 export const aboutPoints = [
   {
     title: "Structured leadership preparation",
