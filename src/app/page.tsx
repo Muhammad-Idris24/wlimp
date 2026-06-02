@@ -104,7 +104,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <Link href="mailto:partnerships@wlimp.org">Become a Partner</Link>
+                  <Link href={`mailto:${siteConfig.email}`}>Become a Partner</Link>
                 </Button>
               </div>
               <div className="event-strip" aria-label="Conference details">
@@ -380,9 +380,7 @@ export default function Home() {
           <a href={`mailto:${siteConfig.email}`}>
             <Mail aria-hidden="true" /> {siteConfig.email}
           </a>
-          <a href={`tel:${siteConfig.phone.replaceAll(" ", "")}`}>
-            <Phone aria-hidden="true" /> {siteConfig.phone}
-          </a>
+
         </address>
         <div className="footer-meta">
           <p>Partnership conversations are welcome for institutional support, media, technical assistance and follow-on opportunities.</p>

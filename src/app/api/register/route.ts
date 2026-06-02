@@ -70,6 +70,7 @@ async function sendEmails(registration: Omit<RegistrationInput, "website">) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.RESEND_FROM_EMAIL;
   const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL;
+  const replyToEmail = process.env.RESEND_REPLY_TO_EMAIL ?? adminEmail;
 
   if (!apiKey || !from || !adminEmail) {
     return;
@@ -94,7 +95,7 @@ async function sendEmails(registration: Omit<RegistrationInput, "website">) {
           <p>WeCare Centre for Community Awareness and Empowerment Initiative</p>
         </div>
       `,
-      replyTo: adminEmail,
+      replyTo: replyToEmail,
     }),
     resend.emails.send({
       from,

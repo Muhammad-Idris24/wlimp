@@ -20,7 +20,7 @@ export const siteConfig = {
   theme: "Leadership For Impact: Driving Youth Innovation For Nation Building",
   date: "20 August 2026",
   location: "Nigeria",
-  email: "partnerships@wlimp.org",
+  email: "wecarefng@gmail.com",
   phone: "+234 000 000 0000",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://wlimp.org",
 };

@@ -32,8 +32,9 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 RESEND_API_KEY=re_your_key
-RESEND_FROM_EMAIL=WLIMP <registrations@your-domain.com>
-ADMIN_NOTIFICATION_EMAIL=team@example.com
+RESEND_FROM_EMAIL=WLIMP <registrations@your-verified-domain.com>
+RESEND_REPLY_TO_EMAIL=team@yourdomain.com
+ADMIN_NOTIFICATION_EMAIL=team@yourdomain.com
 ```
 
 `SUPABASE_SERVICE_ROLE_KEY` must only be used server-side. Do not expose it in the browser.
