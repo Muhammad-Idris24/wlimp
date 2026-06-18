@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Open_Sans } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -78,7 +81,12 @@ export default function RootLayout({
       lang="en"
       className={`${openSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+        <ScrollToTop />
+      </body>
     </html>
   );
 }

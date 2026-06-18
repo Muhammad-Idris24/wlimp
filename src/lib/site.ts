@@ -23,7 +23,72 @@ export const siteConfig = {
   email: "wecarefng@gmail.com",
   phone: "+234 000 000 0000",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://wlimp.org",
+  registrationUrl: process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ?? "",
 };
+
+export const mainNavItems = [
+  { label: "Home", href: "/" },
+  { label: "About WLIMP", href: "/about-wlimp" },
+  { label: "WLIMP Fellows", href: "/fellows" },
+  { label: "Experts", href: "/#experts" },
+];
+
+export const whyAttend = [
+  "Leadership development for clarity, confidence and impact",
+  "Career readiness insights for navigating today's job market",
+  "Mentorship opportunities with experienced leaders and professionals",
+  "Networking with peers, mentors and emerging changemakers",
+  "Access to industry voices across leadership, innovation and youth development",
+  "Personal growth that prepares participants for long-term contribution",
+];
+
+export const participantGains = [
+  "Practical leadership skills participants can apply immediately",
+  "Clearer career development direction and guidance",
+  "Exposure to opportunities across different industries",
+  "Meaningful professional relationships and networks",
+  "Increased confidence, clarity and motivation to grow",
+];
+
+export const attendeeProfiles = [
+  "Students preparing for the future",
+  "Recent graduates navigating career direction",
+  "Young professionals seeking growth and clarity",
+  "Entrepreneurs building meaningful initiatives",
+  "Community leaders or volunteers driving impact",
+  "Aspiring changemakers ready to take initiative",
+];
+
+export const whatToExpect = [
+  "Keynote sessions from inspiring leaders",
+  "Thought-provoking panel discussions",
+  "Hands-on interactive workshops",
+  "High-value networking sessions",
+  "Mentorship and career guidance opportunities",
+];
+
+export const faqs = [
+  {
+    question: "Who can attend?",
+    answer: "Students, graduates, young professionals, entrepreneurs, volunteers, community leaders and aspiring changemakers in Bauchi or within the conference target audience.",
+  },
+  {
+    question: "Is the event free?",
+    answer: "Registration details will be confirmed on the official registration form once it is released.",
+  },
+  {
+    question: "Where will it hold?",
+    answer: "The conference will hold in Nigeria. The specific venue will be announced closer to the event date.",
+  },
+  {
+    question: "What is the event schedule?",
+    answer: "The full agenda will be shared with registered participants before the conference.",
+  },
+  {
+    question: "How do I register?",
+    answer: "Use the registration button on this website. The official Google Form link will be added once it is available.",
+  },
+];
 
 export const metrics = [
   { value: 489, suffix: "", label: "Applications", note: "National and international interest" },
@@ -154,6 +219,51 @@ export const speakerBioImages = [
   { name: "Isawumi Abel Dayo", image: "/speaker-bios/processed/transformational-leadership-recovered-copy.jpg" },
   { name: "Innocent Waziri", image: "/speaker-bios/processed/waziri.jpg" },
   { name: "Zainab Mukhtar", image: "/speaker-bios/processed/zainab.jpg" },
+];
+
+export const fellowBioImages = [
+  { name: "Abba Idris", image: "/fellows/abba-idris.jpg" },
+  { name: "Abdullahi Hauwa Yahya", image: "/fellows/abdullahi-hauwa-yahya.jpg" },
+  { name: "Abel Okwor", image: "/fellows/abel-okwor.jpg" },
+  { name: "Abubakar Abdulkarim", image: "/fellows/abubakar-abdulkarim.jpg" },
+  { name: "Abubakar Arafat Inuwa", image: "/fellows/abubakar-arafat-inuwa.jpg" },
+  { name: "Adamu Usman", image: "/fellows/adamu-usman.jpg" },
+  { name: "Ahmad Halima Shuaib", image: "/fellows/ahmad-halima-shuaib.jpg" },
+  { name: "Aishatu Muhammad Ambi", image: "/fellows/aishatu-muhammad-ambi.jpg" },
+  { name: "Aishatu Muhammad Nura", image: "/fellows/aishatu-muhammad-nura.jpg" },
+  { name: "Albashir Lawan", image: "/fellows/albashir-lawan.jpg" },
+  { name: "Chimaluokem Okoye Jane", image: "/fellows/chimaluokem-okoye-jane.jpg" },
+  { name: "Edidiong John Akpan", image: "/fellows/edidiong-john-akpan.jpg" },
+  { name: "Elizabeth Tarre", image: "/fellows/elizabeth-tarre.jpg" },
+  { name: "Fakhrunnisa Khalil Mahe", image: "/fellows/fakhrunnisa-khalil-mahe.jpg" },
+  { name: "Fatai Sukurat Opeyemi", image: "/fellows/fatai-sukurat-opeyemi.jpg" },
+  { name: "Hafsat Ibrahim Madugu", image: "/fellows/hafsat-ibrahim-madugu.jpg" },
+  { name: "Hakilu Ibrahim", image: "/fellows/hakilu-ibrahim.jpg" },
+  { name: "Hanifa Babayo Shehu", image: "/fellows/hanifa-babayo-shehu.jpg" },
+  { name: "Hauwa Hashim Umar", image: "/fellows/hauwa-hashim-umar.jpg" },
+  { name: "Huldah Zichat Bijimi", image: "/fellows/huldah-zichat-bijimi.jpg" },
+  { name: "Idris Sabo Baba", image: "/fellows/idris-sabo-baba.jpg" },
+  { name: "James Henry", image: "/fellows/james-henry.jpg" },
+  { name: "Kabir Jubril Sanni", image: "/fellows/kabir-jubril-sanni.jpg" },
+  { name: "Kabiru Bala Jibrin", image: "/fellows/kabiru-bala-jibrin.jpg" },
+  { name: "Khadija Sulaiman", image: "/fellows/khadija-sulaiman.jpg" },
+  { name: "Michael Sunmoni", image: "/fellows/michael-sunmoni.jpg" },
+  { name: "Muhammad Dauda", image: "/fellows/muhammad-dauda.jpg" },
+  { name: "Muhammad Isah Abdullahi", image: "/fellows/muhammad-isah-abdullahi.jpg" },
+  { name: "Nathan Lartey", image: "/fellows/nathan-lartey.jpg" },
+  { name: "Nwandu Chinedu Innocent", image: "/fellows/nwandu-chinedu-innocent.jpg" },
+  { name: "Nwibo Blessing Patience", image: "/fellows/nwibo-blessing-patience.jpg" },
+  { name: "Obioedoadim Geoffrey Gudi", image: "/fellows/obioedoadim-geoffrey-gudi.jpg" },
+  { name: "Peter Sandra Golu", image: "/fellows/peter-sandra-golu.jpg" },
+  { name: "Rukayyah Muhammad Bello", image: "/fellows/rukayyah-muhammad-bello.jpg" },
+  { name: "Sadiq Mohammed", image: "/fellows/sadiq-mohammed.jpg" },
+  { name: "Safiyya Dalhatu Umar", image: "/fellows/safiyya-dalhatu-umar.jpg" },
+  { name: "Salamatu Ibrahim", image: "/fellows/salamatu-ibrahim.jpg" },
+  { name: "Shamsu Abdulrahaman", image: "/fellows/shamsu-abdulrahaman.jpg" },
+  { name: "Shamsuddeen Musa", image: "/fellows/shamsuddeen-musa.jpg" },
+  { name: "Sumaiya Muhammad Danlami", image: "/fellows/sumaiya-muhammad-danlami.jpg" },
+  { name: "Sunusi Inuwa Zagi", image: "/fellows/sunusi-inuwa-zagi.jpg" },
+  { name: "Yakubu Abdullahi Musa", image: "/fellows/yakubu-abdullahi-musa.jpg" },
 ];
 
 export const aboutPoints = [
