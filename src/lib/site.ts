@@ -23,7 +23,7 @@ export const siteConfig = {
   email: "wecarefng@gmail.com",
   phone: "+234 000 000 0000",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://wlimp.org",
-  registrationUrl: process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ?? "",
+  registrationUrl: process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ?? "https://forms.gle/djUSnhnFbgDcfdRv7",
 };
 
 export const mainNavItems = [
@@ -86,7 +86,7 @@ export const faqs = [
   },
   {
     question: "How do I register?",
-    answer: "Use the registration button on this website. The official Google Form link will be added once it is available.",
+    answer: "Use any registration button on this website to open the official WLIMP Leadership Conference Google Form.",
   },
 ];
 

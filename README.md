@@ -29,6 +29,7 @@ Open `http://localhost:3000`.
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+NEXT_PUBLIC_GOOGLE_FORM_URL=https://forms.gle/djUSnhnFbgDcfdRv7
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 RESEND_API_KEY=re_your_key
