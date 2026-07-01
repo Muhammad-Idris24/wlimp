@@ -77,22 +77,6 @@ export default function Home() {
               </span>
             </div>
           </Reveal>
-          <Reveal className="hero-visual" delay={0.12}>
-            <div className="image-frame">
-              <Image
-                src="/images/abuja-youth-leadership.jpg"
-                alt="Young person in Abuja, Nigeria, representing the emerging leadership generation WLIMP serves"
-                width={920}
-                height={1180}
-                priority
-                sizes="(max-width: 900px) 88vw, 42vw"
-              />
-            </div>
-            <div className="hero-note">
-              <span>WLIMP 2026</span>
-              <strong>Your next level starts with showing up.</strong>
-            </div>
-          </Reveal>
         </div>
       </section>
 

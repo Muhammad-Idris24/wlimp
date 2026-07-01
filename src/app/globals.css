@@ -132,13 +132,41 @@ a {
 }
 
 .hero-section {
+  isolation: isolate;
   position: relative;
   min-height: 100svh;
   overflow: hidden;
   padding: 148px clamp(20px, 4vw, 56px) 72px;
-  background:
-    radial-gradient(circle at 84% 20%, rgba(21, 152, 212, 0.16), transparent 31%),
-    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  background: #06183d; /* Fallback color */
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("/images/hero.png") center top / cover no-repeat;
+  pointer-events: none;
+}
+
+/* Keep the overlay gradient for readability */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    linear-gradient(270deg, rgba(6, 24, 61, 0.92) 0%, rgba(6, 24, 61, 0.82) 30%, rgba(6, 24, 61, 0.24) 70%),
+    linear-gradient(180deg, rgba(6, 24, 61, 0.1) 0%, rgba(6, 24, 61, 0.3) 100%);
+  pointer-events: none;
 }
 
 .ambient-grid {
@@ -155,17 +183,17 @@ a {
 
 .hero-inner {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.72fr);
+  display: flex;
   align-items: center;
-  gap: clamp(44px, 7vw, 96px);
+  justify-content: flex-end; /* This pushes content to the right */
   max-width: 1240px;
   min-height: calc(100svh - 200px);
   margin: 0 auto;
 }
 
 .hero-copy {
-  max-width: 780px;
+  max-width: 720px;
+  text-align: right; /* Align text to the right */
 }
 
 .institution-line,
@@ -184,7 +212,7 @@ a {
 .hero-copy h1 {
   margin: 0;
   max-width: 850px;
-  color: var(--charcoal);
+  color: #fff;
   font-size: clamp(36px, 5.6vw, 70px);
   font-weight: 730;
   letter-spacing: 0;
@@ -193,8 +221,8 @@ a {
 
 .hero-lede {
   max-width: 650px;
-  margin: 28px 0 0;
-  color: var(--muted);
+  margin: 28px 0 0  auto; /* Push to the right */
+  color: rgba(255, 255, 255, 0.82);
   font-size: clamp(16px, 1.55vw, 18px);
   line-height: 1.7;
 }
@@ -211,11 +239,13 @@ a {
 
 .hero-actions {
   margin-top: 36px;
+  justify-content: flex-end; /* Align buttons to the right */
 }
 
 .event-strip {
   margin-top: 42px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.82);
+  justify-content: flex-end; /* Align event strip to the right */
 }
 
 .event-strip span,
@@ -231,7 +261,7 @@ a {
 .conference-meta svg {
   width: 16px;
   height: 16px;
-  color: var(--emerald);
+  color: var(--gold);
 }
 
 .hero-visual {
@@ -790,6 +820,42 @@ a {
   line-height: 1.04;
 }
 
+.about-page-hero {
+  background: #f7fbff;
+  padding-bottom: 64px;
+}
+
+.about-page-heading {
+  max-width: 940px;
+}
+
+.about-page-heading h1 {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+}
+
+.about-page-content-section {
+  padding-top: 72px;
+}
+
+.about-page-content {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.about-page-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.9;
+}
+
+.about-page-content p + p {
+  margin-top: 24px;
+}
+
 .fellows-hero {
   background: #f7fbff;
   padding-bottom: 56px;
@@ -1126,6 +1192,23 @@ a {
 
   .hero-inner {
     min-height: auto;
+    justify-content: center; /* Center on medium screens */
+  }
+
+  .hero-copy {
+    text-align: center; /* Center text on medium screens */
+  }
+
+  .hero-lede {
+    margin: 28px auto 0; /* Center on medium screens */
+  }
+
+  .hero-actions {
+    justify-content: center; /* Center buttons on medium screens */
+  }
+
+  .event-strip {
+    justify-content: center; /* Center event strip on medium screens */
   }
 
   .hero-visual {
@@ -1170,8 +1253,21 @@ a {
   }
 
   .hero-section {
-    min-height: auto;
-    padding: 62px 18px 56px;
+    min-height: 760px;
+    padding: 86px 18px 300px;
+    background:
+      radial-gradient(circle at 50% 74%, rgba(21, 152, 212, 0.24), transparent 34%),
+      linear-gradient(180deg, #06183d 0%, #0a2355 68%, #eef5fb 100%);
+  }
+
+  .hero-section::before {
+    background-position: center bottom;
+    background-size: auto min(360px, 48%);
+  }
+
+  .hero-section::after {
+    background:
+      linear-gradient(180deg, rgba(6, 24, 61, 0.94) 0%, rgba(6, 24, 61, 0.82) 52%, rgba(6, 24, 61, 0.08) 100%);
   }
 
   .hero-copy h1 {
