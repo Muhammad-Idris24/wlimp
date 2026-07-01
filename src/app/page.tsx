@@ -73,7 +73,7 @@ export default function Home() {
                 <MapPin aria-hidden="true" /> Nigeria
               </span>
               <span>
-                <Globe2 aria-hidden="true" /> Registration details coming soon
+                <Globe2 aria-hidden="true" /> Register Via the Links
               </span>
             </div>
           </Reveal>
