@@ -28,6 +28,9 @@ export function SiteFooter() {
       </address>
       <div className="footer-meta">
         <p>Partnership conversations are welcome for institutional support, media, technical assistance and follow-on opportunities.</p>
+        <Link href="/partners" className="footer-link">
+          Partner with WLIMP
+        </Link>
       </div>
       <small className="footer-copyright">
         Copyright {new Date().getFullYear()} WeCare Centre for Community Awareness and Empowerment Initiative.

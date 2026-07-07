@@ -17,7 +17,7 @@ export default function AboutWlimpPage() {
       <section className="section about-page-content-section">
         <article className="about-page-content">
           <p>
-            WECARE Leadership and Impact Mentorship Programme (WLIMP) is a youth-focused initiative committed to
+            WeCare Leadership and Impact Mentorship Programme (WLIMP) is a youth-focused initiative committed to
             preparing the next generation of leaders for success in an ever-evolving world. Through mentorship,
             leadership development, career readiness, and capacity-building programmes, WLIMP empowers young men and
             women with the knowledge, skills, and networks they need to thrive.

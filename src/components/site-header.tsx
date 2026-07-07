@@ -26,16 +26,21 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <Button asChild size="default">
-        <Link
-          href={registerHref}
-          className="cta-on-emerald"
-          target={isExternalRegistration ? "_blank" : undefined}
-          rel={isExternalRegistration ? "noreferrer" : undefined}
-        >
-          Register
-        </Link>
-      </Button>
+      <div className="header-actions">
+        <Button asChild variant="secondary" size="default">
+          <Link href="/partners">Partner</Link>
+        </Button>
+        <Button asChild size="default">
+          <Link
+            href={registerHref}
+            className="cta-on-emerald"
+            target={isExternalRegistration ? "_blank" : undefined}
+            rel={isExternalRegistration ? "noreferrer" : undefined}
+          >
+            Register
+          </Link>
+        </Button>
+      </div>
     </header>
   );
 }

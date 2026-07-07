@@ -24,12 +24,14 @@ export const siteConfig = {
   phone: "+234 000 000 0000",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://wlimp.org",
   registrationUrl: process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ?? "https://forms.gle/djUSnhnFbgDcfdRv7",
+  partnershipUrl: "https://forms.gle/xAhvfuYbgBzmaqzm7",
 };
 
 export const mainNavItems = [
   { label: "Home", href: "/" },
   { label: "About WLIMP", href: "/about-wlimp" },
   { label: "WLIMP Fellows", href: "/fellows" },
+  { label: "Partners", href: "/partners" },
   { label: "Experts", href: "/#experts" },
 ];
 

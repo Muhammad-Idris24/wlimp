@@ -64,6 +64,9 @@ export default function Home() {
               <Button asChild variant="secondary" size="lg">
                 <Link href="/fellows">Meet the Fellows</Link>
               </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href="/partners">Partner With WLIMP</Link>
+              </Button>
             </div>
             <div className="event-strip" aria-label="Conference details">
               <span>
@@ -73,7 +76,7 @@ export default function Home() {
                 <MapPin aria-hidden="true" /> Nigeria
               </span>
               <span>
-                <Globe2 aria-hidden="true" /> Register Via the Links
+                <Globe2 aria-hidden="true" /> Register via the official link
               </span>
             </div>
           </Reveal>
@@ -212,6 +215,29 @@ export default function Home() {
             transformation. The conference expands that impact by bringing together diverse voices, ideas and
             opportunities that inspire action and long-term growth.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="section partnership-prompt-section">
+        <Reveal className="partnership-prompt">
+          <p>Partnerships</p>
+          <h2>Support a leadership platform built for long-term youth transformation.</h2>
+          <span>
+            WLIMP welcomes institutions, foundations, companies, media platforms and development partners who want to
+            invest in practical leadership preparation for emerging young leaders.
+          </span>
+          <div className="hero-actions partnership-actions">
+            <Button asChild size="lg">
+              <Link href="/partners" className="cta-on-emerald">
+                Explore Partnership <ArrowRight data-icon="inline-end" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg">
+              <Link href={siteConfig.partnershipUrl} target="_blank" rel="noreferrer">
+                Open Partner Form
+              </Link>
+            </Button>
+          </div>
         </Reveal>
       </section>
 
