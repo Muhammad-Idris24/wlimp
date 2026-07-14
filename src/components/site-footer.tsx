@@ -9,10 +9,10 @@ export function SiteFooter() {
       <div>
         <Link href="/" className="brand-mark">
           <Image
-            src="/brand/wecare-logo-transparent.png"
-            alt="WeCare Centre for Community Awareness and Empowerment Initiative"
-            width={1080}
-            height={334}
+            src="/brand/wecare-leadership-conference-logo-nav.png"
+            alt="WeCare Leadership Conference"
+            width={1413}
+            height={526}
             className="brand-logo footer-logo"
           />
         </Link>

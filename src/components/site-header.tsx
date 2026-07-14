@@ -11,10 +11,10 @@ export function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="brand-mark" aria-label="WLIMP home">
         <Image
-          src="/brand/wecare-logo-transparent.png"
-          alt="WeCare Centre for Community Awareness and Empowerment Initiative"
-          width={1080}
-          height={334}
+          src="/brand/wecare-leadership-conference-logo-nav.png"
+          alt="WeCare Leadership Conference"
+          width={1413}
+          height={526}
           className="brand-logo"
           priority
         />
