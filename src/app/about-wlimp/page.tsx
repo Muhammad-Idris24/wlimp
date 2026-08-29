@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About WLIMP",
@@ -12,6 +13,14 @@ export default function AboutWlimpPage() {
         <div className="compact-heading about-page-heading">
           <p>About WLIMP</p>
           <h1>Preparing the next generation of leaders for an evolving world.</h1>
+          <Link
+            href="https://thewecaref.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-wecare-button"
+          >
+            About WE CARE
+          </Link>
         </div>
       </section>
       <section className="section about-page-content-section">
